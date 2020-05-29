@@ -12,10 +12,18 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "default"
     buildTypes {
         release {
             minifyEnabled false
@@ -28,10 +36,31 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    testImplementation "junit:junit:$junit_version"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    implementation "com.facebook.fresco:fresco:$fresco_version"
+
+    implementation  "org.parceler:parceler-api:$parceler_version"
+    annotationProcessor "org.parceler:parceler:$parceler_version"
+
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+
+    implementation 'com.google.android.gms:play-services-vision:20.0.0'
+
+    implementation "com.google.android.material:material:$app_version"
+
+    implementation "uk.co.chrisjenx:calligraphy:$fontpath_version"
 }
