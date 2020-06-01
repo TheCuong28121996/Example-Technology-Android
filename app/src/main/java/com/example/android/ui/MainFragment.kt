@@ -20,6 +20,10 @@ class MainFragment: BaseFragment() {
         btnFlutterModule.setOnClickListener {
             startFragment(R.id.action_mainFragment_to_inputNumbersFragment)
         }
+
+        btnMergeAdapter.setOnClickListener{
+            startFragment(R.id.action_mainFragment_to_mergeAdapterFragment)
+        }
     }
 
     override fun initData() {

@@ -26,6 +26,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_mergeAdapterFragment"
+            app:destination="@id/mergeAdapterFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -39,6 +46,11 @@
         android:name="com.example.android.ui.flutter_module.InputNumbersFragment"
         android:label="InputNumbersFragment"
         tools:layout="@layout/input_numbers_fragment"/>
+    <fragment
+        android:id="@+id/mergeAdapterFragment"
+        android:name="com.example.android.ui.merge_adapter.MergeAdapterFragment"
+        android:label="MergeAdapterFragment"
+        tools:layout="@layout/merge_adapter_fragment"/>
 
 
 </navigation>

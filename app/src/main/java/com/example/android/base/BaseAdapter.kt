@@ -16,8 +16,8 @@ abstract class BaseAdapter<O> : RecyclerView.Adapter<BaseViewHolder<O>>(),
         mItemClickListener = listener
     }
 
-    fun getListener(): ViewHolderListener<O>{
-        return this.mItemClickListener!!
+    fun getListener(): ViewHolderListener<O>?{
+        return this.mItemClickListener
     }
 
     open fun isExist(item: O): Boolean {

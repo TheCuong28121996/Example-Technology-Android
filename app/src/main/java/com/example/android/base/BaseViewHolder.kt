@@ -4,7 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.other.ViewHolderListener
 
-abstract class BaseViewHolder<O>(itemView: View?, listener: ViewHolderListener<O>): RecyclerView.ViewHolder(itemView!!) {
+abstract class BaseViewHolder<O>(itemView: View?, listener: ViewHolderListener<O>?): RecyclerView.ViewHolder(itemView!!) {
 
     protected var mItemClickListener: ViewHolderListener<O>? = null
 
