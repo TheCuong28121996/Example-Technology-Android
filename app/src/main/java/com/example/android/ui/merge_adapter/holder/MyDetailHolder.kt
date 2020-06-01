@@ -12,8 +12,8 @@ class MyDetailHolder internal constructor(view: View?, listener: ViewHolderListe
     override fun bindData(data: MyDetail?) {
         if(data != null){
             var sTemp = ""
-            sTemp = data.name
 
+            sTemp = data.name
             if(!sTemp.isEmpty()){
                 itemView.textViewUser.text = sTemp
             }

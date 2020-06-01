@@ -104,10 +104,4 @@ abstract class BaseFragment: Fragment() {
     fun onBackPressed(){
         mActivity!!.onBackPressed()
     }
-
-//    fun requestPermisstion(permissions: Array<String>, requestCode: Int) {
-//        ActivityCompat.requestPermissions(
-//            mActivity!!, permissions, requestCode
-//        )
-//    }
 }

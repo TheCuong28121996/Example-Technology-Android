@@ -1,4 +1,4 @@
-package com.example.android.ui.merge_adapter.holder
+package com.example.android.ui.merge_adapter
 
 import androidx.lifecycle.MutableLiveData
 import com.example.android.base.BaseViewModel

@@ -13,13 +13,12 @@ import com.example.android.base.BaseFragment
 import com.example.android.data.Banner
 import com.example.android.data.MyDetail
 import com.example.android.data.User
-import com.example.android.other.DataSource
 import com.example.android.other.ViewHolderListener
 import com.example.android.ui.merge_adapter.adapter.BannerAdapter
 import com.example.android.ui.merge_adapter.adapter.MyDetailAdapter
 import com.example.android.ui.merge_adapter.adapter.UsersAdapter
-import com.example.android.ui.merge_adapter.holder.MergeAdapterViewModel
 import com.example.android.utils.DebugLog
+import com.ilogic.roid.apphub.utils.Event
 import kotlinx.android.synthetic.main.merge_adapter_fragment.*
 
 class MergeAdapterFragment : BaseFragment() {
@@ -124,22 +123,19 @@ class MergeAdapterFragment : BaseFragment() {
 
     private val userListener = object : ViewHolderListener<User> {
         override fun itemClicked(var1: User?, var2: Int) {
-            DebugLog.show(var1!!.name)
-            DebugLog.show("click position " + var2)
+            viewModel.eventMessage.value = Event(var1!!.name)
         }
     }
 
     private val bannerListener = object : ViewHolderListener<Banner> {
         override fun itemClicked(var1: Banner?, var2: Int) {
-            DebugLog.show(var1!!.bannerImage.toString())
-            DebugLog.show("click position " + var2)
+            viewModel.eventMessage.value = Event(var1!!.bannerImage.toString())
         }
     }
 
     private val detailListener = object : ViewHolderListener<MyDetail> {
         override fun itemClicked(var1: MyDetail?, var2: Int) {
-            DebugLog.show(var1!!.name)
-            DebugLog.show("click position " + var2)
+            viewModel.eventMessage.value = Event(var1!!.name)
         }
     }
 }

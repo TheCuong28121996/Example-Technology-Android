@@ -13,8 +13,8 @@ class UsersHolder internal constructor(view: View?, listener: ViewHolderListener
     override fun bindData(data: User?) {
         if(data != null){
             var sTemp = ""
-            sTemp = data.name
 
+            sTemp = data.name
             if(!sTemp.isEmpty()){
                 itemView.textViewUserName.text = sTemp
             }
