@@ -24,6 +24,10 @@ class MainFragment: BaseFragment() {
         btnMergeAdapter.setOnClickListener{
             startFragment(R.id.action_mainFragment_to_mergeAdapterFragment)
         }
+
+        btnMessage.setOnClickListener {
+            startFragment(R.id.action_mainFragment_to_messageFragment)
+        }
     }
 
     override fun initData() {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/view_match">
+
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/button_action"
+        android:background="@drawable/background_button_yellow"
+        android:layout_centerInParent="true"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        style="@style/button_action"
+        android:background="@drawable/background_button_blue"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_start"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Stop"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

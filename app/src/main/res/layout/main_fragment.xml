@@ -9,7 +9,7 @@
         android:id="@+id/btnMotionLayout"
         style="@style/button_action"
         android:layout_margin="20dp"
-        android:background="@drawable/background_button"
+        android:background="@drawable/background_button_yellow"
         android:text="Motion Layout"
         android:textAllCaps="false" />
 
@@ -17,7 +17,7 @@
         android:id="@+id/btnFlutterModule"
         style="@style/button_action"
         android:layout_margin="20dp"
-        android:background="@drawable/background_button"
+        android:background="@drawable/background_button_yellow"
         android:text="Flutter Module"
         android:textAllCaps="false"
         android:layout_toEndOf="@id/btnMotionLayout"/>
@@ -26,9 +26,20 @@
         android:id="@+id/btnMergeAdapter"
         style="@style/button_action"
         android:layout_margin="20dp"
-        android:background="@drawable/background_button"
+        android:background="@drawable/background_button_yellow"
         android:text="Merge Adapter"
         android:textAllCaps="false"
         android:layout_below="@id/btnMotionLayout"/>
+
+    <Button
+        android:id="@+id/btnMessage"
+        style="@style/button_action"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_button_yellow"
+        android:text="Message FaceBook"
+        android:textAllCaps="false"
+        android:layout_toEndOf="@id/btnMergeAdapter"
+        android:layout_below="@id/btnFlutterModule"/>
+
 
 </RelativeLayout>
