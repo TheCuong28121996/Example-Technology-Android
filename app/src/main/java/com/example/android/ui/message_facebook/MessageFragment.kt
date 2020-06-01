@@ -7,7 +7,7 @@ import android.provider.Settings
 import androidx.annotation.RequiresApi
 import com.example.android.R
 import com.example.android.base.BaseFragment
-import com.example.android.other.MyService
+import com.example.android.service.MyService
 import kotlinx.android.synthetic.main.message_fragment.*
 
 

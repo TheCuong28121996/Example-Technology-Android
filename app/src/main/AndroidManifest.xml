@@ -27,7 +27,7 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize" />
 
-        <service android:name=".other.MyService"
+        <service android:name=".service.MyService"
             android:exported="true"/>
     </application>
 

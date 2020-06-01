@@ -1,4 +1,4 @@
-package com.example.android.other
+package com.example.android.service
 
 import android.annotation.SuppressLint
 import android.app.Service
