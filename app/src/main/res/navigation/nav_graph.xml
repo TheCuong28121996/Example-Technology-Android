@@ -18,6 +18,14 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_mainFragment_to_inputNumbersFragment"
+            app:destination="@id/inputNumbersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -25,4 +33,12 @@
         android:name="com.example.android.ui.motion.MotionFragment"
         android:label="MotionFragment"
         tools:layout="@layout/motion_fragment"/>
+
+    <fragment
+        android:id="@+id/inputNumbersFragment"
+        android:name="com.example.android.ui.flutter_module.InputNumbersFragment"
+        android:label="InputNumbersFragment"
+        tools:layout="@layout/input_numbers_fragment"/>
+
+
 </navigation>

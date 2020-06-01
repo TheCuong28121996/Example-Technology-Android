@@ -16,6 +16,10 @@ class MainFragment: BaseFragment() {
         btnMotionLayout.setOnClickListener{
             startFragment(R.id.action_mainFragment_to_motionFragment)
         }
+
+        btnFlutterModule.setOnClickListener {
+            startFragment(R.id.action_mainFragment_to_inputNumbersFragment)
+        }
     }
 
     override fun initData() {
