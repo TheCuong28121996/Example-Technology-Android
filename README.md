@@ -14,6 +14,7 @@ The “Navigation Component” simplifies implementing navigation, while also he
   - Implementing navigation UI patterns (like navigation drawers and bottom nav) with little additional work.
   - Type safety when passing information while navigating.
   - Android Studio tooling for visualizing and editing the navigation flow of an app
+  
 ![Image of Navigaiton Component](https://miro.medium.com/max/1280/1*ESf1y0VYcHE5ldkCDD8HKA.png)
 ## 2. MVVM, Kotlin <h2>
 ![Image of MVVM](https://images.viblo.asia/full/de76dd09-1661-42b4-b1ec-bf2bdf106ba3.png)
