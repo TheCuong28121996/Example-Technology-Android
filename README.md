@@ -1,5 +1,5 @@
 # Android + MVVM + Kotlin + Navigation Component + Motion Layout + MergeAdapter + Compose UI 
-[link to Kotlin!](https://kotlinlang.org/)
+[![Kotlin](https://img.shields.io/badge/kotlin-1.3.61-blue.svg)](http://kotlinlang.org)
 ## 1. Navigation Component <h2>
 ![Image of Navigaiton Component](https://miro.medium.com/max/1280/1*ESf1y0VYcHE5ldkCDD8HKA.png)
 ## 2. MVVM, Kotlin <h2>
