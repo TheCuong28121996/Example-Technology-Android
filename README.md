@@ -6,6 +6,14 @@
 [![Compose](https://img.shields.io/badge/Jetpack%20Compose-0.1.0--dev02-red)](https://developer.android.com/jetpack/compose)
 [![Android Studio](https://img.shields.io/badge/Android%20Studio-4.1%20Canary%2010-blue)](https://developer.android.com/studio/preview)
 ## 1. Navigation Component <h2>
+The “Navigation Component” simplifies implementing navigation, while also helping you visualize your app’s navigation flow. The library provides a number of benefits, including:
+  - Automatic handling of fragment transactions
+  - Correctly handling up to and back by default.
+  - Default behaviours for animations and transitions
+  - Deep linking as a first-class operation.
+  - Implementing navigation UI patterns (like navigation drawers and bottom nav) with little additional work.
+  - Type safety when passing information while navigating.
+  - Android Studio tooling for visualizing and editing the navigation flow of an app
 ![Image of Navigaiton Component](https://miro.medium.com/max/1280/1*ESf1y0VYcHE5ldkCDD8HKA.png)
 ## 2. MVVM, Kotlin <h2>
 ![Image of MVVM](https://images.viblo.asia/full/de76dd09-1661-42b4-b1ec-bf2bdf106ba3.png)
