@@ -19,10 +19,16 @@ The “Navigation Component” simplifies implementing navigation, while also he
 ## 2. MVVM, Kotlin <h2>
 ![Image of MVVM](https://images.viblo.asia/full/de76dd09-1661-42b4-b1ec-bf2bdf106ba3.png)
 ## 3. Motion Layout <h2>
+ MotionLayout is a new class available in the ConstraintLayout 2.0 library to help Android developers manage motion and widget animation in their application.
+  
 ![Image of Motion Layout](https://s3.ap-south-1.amazonaws.com/mindorks-server-uploads/motion-layout-banner.png)
 ## 4. MergeAdapter <h2>
+ MergeAdapter is a new class available in recyclerview:1.2.0-alpha02 which enables you to sequentially combine multiple adapters to be displayed in a single RecyclerView. This enables you to better encapsulate your adapters rather than having to combine many d
+  
 ![Image of MergeAdapter](https://miro.medium.com/max/4320/1*IL4-wUSph895Rjeg5qb1mg.png)
 ## 5. Create Chat Heads Like Facebook Messenger <h2>
 ![Image of Message](https://www.androidhive.info/wp-content/uploads/2016/11/android-facebook-like-floating-chat-head.png)
 ## 6. Jetpack Compose <h2>
+ Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. — Android Developers
+  
 ![Image of Message](https://miro.medium.com/max/1280/1*N5E7JtRrjEyEINHNGdKaHQ.png)
