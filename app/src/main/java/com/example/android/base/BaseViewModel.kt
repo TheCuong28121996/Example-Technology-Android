@@ -9,6 +9,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 open class BaseViewModel : ViewModel() {
 
     val eventLoading = MutableLiveData<Event<Boolean>>()

@@ -12,8 +12,12 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 object DebugLog {
-    private const val TAG = "LoyaLog"
+    private const val TAG = "Logger"
     private const val DOT_LEVEL = 5 //3 package name dots + 2
     private var mTag = TAG
     private var isDebug = true

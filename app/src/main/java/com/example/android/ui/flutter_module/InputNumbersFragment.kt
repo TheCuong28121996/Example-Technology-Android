@@ -10,6 +10,10 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugin.common.MethodChannel
 import kotlinx.android.synthetic.main.input_numbers_fragment.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class InputNumbersFragment: BaseFragment() {
 
     override fun getLayoutResId(): Int = R.layout.input_numbers_fragment

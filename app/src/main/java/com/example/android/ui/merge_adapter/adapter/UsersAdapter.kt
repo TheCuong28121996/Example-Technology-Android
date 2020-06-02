@@ -7,6 +7,10 @@ import com.example.android.base.BaseViewHolder
 import com.example.android.data.User
 import com.example.android.ui.merge_adapter.holder.UsersHolder
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class UsersAdapter: BaseAdapter<User>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<User> {

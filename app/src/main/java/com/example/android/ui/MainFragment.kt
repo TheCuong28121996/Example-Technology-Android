@@ -5,6 +5,10 @@ import com.example.android.R
 import com.example.android.base.BaseFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class MainFragment: BaseFragment() {
 
     override fun getLayoutResId(): Int = R.layout.main_fragment

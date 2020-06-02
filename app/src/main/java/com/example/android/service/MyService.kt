@@ -12,6 +12,10 @@ import android.view.WindowManager
 import android.widget.ImageView
 import com.example.android.R
 
+/**
+ * @author TheCuong
+ * @since 02/06/2018
+ */
 class MyService: Service() {
 
     private var mWindowManager: WindowManager? = null

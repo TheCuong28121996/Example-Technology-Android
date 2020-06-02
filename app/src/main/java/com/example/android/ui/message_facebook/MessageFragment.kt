@@ -11,6 +11,10 @@ import com.example.android.service.MyService
 import kotlinx.android.synthetic.main.message_fragment.*
 
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class MessageFragment: BaseFragment() {
 
     override fun getLayoutResId(): Int = R.layout.message_fragment

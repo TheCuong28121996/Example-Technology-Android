@@ -7,6 +7,10 @@ import com.example.android.base.BaseViewHolder
 import com.example.android.data.Banner
 import com.example.android.ui.merge_adapter.holder.BannerHolder
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class BannerAdapter: BaseAdapter<Banner>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Banner> {

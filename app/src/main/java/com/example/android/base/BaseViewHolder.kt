@@ -4,6 +4,10 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.other.ViewHolderListener
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 abstract class BaseViewHolder<O>(itemView: View?, listener: ViewHolderListener<O>?): RecyclerView.ViewHolder(itemView!!) {
 
     protected var mItemClickListener: ViewHolderListener<O>? = null

@@ -1,5 +1,9 @@
-package com.ilogic.roid.apphub.utils
+package com.example.android.utils
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 open class Event<out T>(private val content: T) {
 
     var hasBeenHandled = false

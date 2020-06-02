@@ -12,6 +12,10 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.android.R
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 abstract class BaseFragment: Fragment() {
 
     private var mActivity: BaseActivity? = null

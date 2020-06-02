@@ -2,9 +2,13 @@ package com.example.android.other
 
 import com.example.android.R
 import com.example.android.data.Banner
-import com.example.android.data.MyDetail
+import com.example.android.data.Detail
 import com.example.android.data.User
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 object DataSource {
 
     fun getUser() = ArrayList<User>().apply {
@@ -20,5 +24,5 @@ object DataSource {
 
     fun getBanner() = Banner(R.drawable.image)
 
-    fun getDeatail() = MyDetail(1, "Himanshu Singh", "I am an writer and Open Source contributor in MindOrks.")
+    fun getDeatail() = Detail(1, "Himanshu Singh", "I am an writer and Open Source contributor in MindOrks.")
 }

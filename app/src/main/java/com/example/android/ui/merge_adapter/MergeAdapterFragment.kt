@@ -11,20 +11,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.R
 import com.example.android.base.BaseFragment
 import com.example.android.data.Banner
-import com.example.android.data.MyDetail
+import com.example.android.data.Detail
 import com.example.android.data.User
 import com.example.android.other.ViewHolderListener
 import com.example.android.ui.merge_adapter.adapter.BannerAdapter
-import com.example.android.ui.merge_adapter.adapter.MyDetailAdapter
+import com.example.android.ui.merge_adapter.adapter.DetailAdapter
 import com.example.android.ui.merge_adapter.adapter.UsersAdapter
-import com.example.android.utils.DebugLog
 import com.ilogic.roid.apphub.utils.Event
 import kotlinx.android.synthetic.main.merge_adapter_fragment.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class MergeAdapterFragment : BaseFragment() {
 
     private lateinit var viewModel: MergeAdapterViewModel
-    private val myDetailAdapter by lazy { MyDetailAdapter() }
+    private val myDetailAdapter by lazy { DetailAdapter() }
     private val userAdapter by lazy { UsersAdapter() }
     private val bannerAdapter by lazy { BannerAdapter() }
 
@@ -133,8 +136,8 @@ class MergeAdapterFragment : BaseFragment() {
         }
     }
 
-    private val detailListener = object : ViewHolderListener<MyDetail> {
-        override fun itemClicked(var1: MyDetail?, var2: Int) {
+    private val detailListener = object : ViewHolderListener<Detail> {
+        override fun itemClicked(var1: Detail?, var2: Int) {
             viewModel.eventMessage.value = Event(var1!!.name)
         }
     }

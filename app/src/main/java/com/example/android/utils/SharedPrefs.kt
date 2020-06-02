@@ -1,9 +1,13 @@
-package com.ilogic.roid.hub.utils
+package com.example.android.utils
 
 import android.content.Context
 import android.content.SharedPreferences
 import com.example.android.MyApplication
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class SharedPrefs private constructor() {
     private val mSharedPreferences: SharedPreferences
 

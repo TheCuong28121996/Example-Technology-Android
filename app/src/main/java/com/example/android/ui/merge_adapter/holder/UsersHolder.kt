@@ -7,6 +7,10 @@ import com.example.android.data.User
 import com.example.android.other.ViewHolderListener
 import kotlinx.android.synthetic.main.item_layout_user.view.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class UsersHolder internal constructor(view: View?, listener: ViewHolderListener<User>?):
     BaseViewHolder<User>(view, listener){
 

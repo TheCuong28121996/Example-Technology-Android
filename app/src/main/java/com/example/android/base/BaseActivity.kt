@@ -4,13 +4,17 @@ import android.app.Dialog
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android.other.DialogListener
 import com.example.android.utils.DebugLog
 import com.ilogic.roid.hub.utils.CommonUtils
 import java.util.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 abstract class BaseActivity : AppCompatActivity() {
 
-    protected val TAG = BaseActivity::class.java.simpleName
     private lateinit var mProgressDialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,54 +35,18 @@ abstract class BaseActivity : AppCompatActivity() {
 
     abstract fun customToolBar(visibility: Int, title: String?)
 
-    open fun getString(value: String): String? {
-
-        val result = value
-        var strRes = value;
-
-        if (!strRes.isEmpty()) {
-            val packageName: String = this.packageName
-            val resources: Resources = this.resources
-            var resId = 0
-
-            // Default by input
-            try {
-                resId = resources.getIdentifier(strRes, "string", packageName)
-            } catch (e: NullPointerException) {
-                strRes = strRes.toUpperCase(Locale.getDefault())
-            }
-
-            if (0 < resId) {
-                return getString(resId)
-                //return resources.getString(resId);
-            }
-
-            // After change to UpperCase
-            try {
-                resId = resources.getIdentifier(strRes, "string", packageName)
-            } catch (e: NullPointerException) {
-                // Convert to LowerCase
-                strRes = strRes.toLowerCase(Locale.getDefault())
-            }
-            if (0 < resId) {
-                return getString(resId)
-            }
-
-            // After change to LowerCase
-            try {
-                resId = resources.getIdentifier(strRes, "string", packageName)
-            } catch (e: NullPointerException) {
-                // Ignore
-            }
-            if (0 < resId) {
-                return getString(resId)
-            }
-        }
-        return result
-    }
-
     fun showMessage(message: String) {
-       DebugLog.showToast(this, message)
+        DebugLog.showToast(this, message)
+//        CommonUtils.messageDialog("Notification",message, this,"Cancle", "", true, object: DialogListener{
+//            override fun onPositiveClick() {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onNegativeClick() {
+//                TODO("Not yet implemented")
+//            }
+//
+//        })
     }
 
     fun showLoadingDialog() {

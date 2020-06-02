@@ -7,6 +7,10 @@ import com.example.android.data.Banner
 import com.example.android.other.ViewHolderListener
 import kotlinx.android.synthetic.main.item_layout_banner.view.*
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 class BannerHolder internal constructor(view: View?, listener: ViewHolderListener<Banner>?) :
     BaseViewHolder<Banner>(view, listener) {
 

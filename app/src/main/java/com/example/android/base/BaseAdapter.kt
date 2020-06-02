@@ -6,6 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.other.ViewHolderListener
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 abstract class BaseAdapter<O> : RecyclerView.Adapter<BaseViewHolder<O>>(),
     ViewHolderListener<O> {
 

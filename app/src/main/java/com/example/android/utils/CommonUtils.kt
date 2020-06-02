@@ -1,7 +1,9 @@
 package com.ilogic.roid.hub.utils
 
+import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -10,11 +12,16 @@ import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
 import com.example.android.R
+import com.example.android.other.DialogListener
 import com.example.android.utils.DebugLog
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 object CommonUtils {
     // This is func show loading
     fun showLoadingDialog(context: Context?): Dialog {
@@ -102,5 +109,31 @@ object CommonUtils {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.data = Uri.parse("tel:$phoneNumber")
         context.startActivity(intent)
+    }
+
+    fun messageDialog(title: String,
+        msg: String, context: Context?
+        , positiveButtonText: String, negativeButtonText: String,
+        isCancellable: Boolean,
+        dialogListener: DialogListener
+    ) {
+        context?.let { context ->
+            val builder =
+                AlertDialog.Builder(context)
+            builder.setTitle(title)
+            builder.setMessage(msg)
+            builder.setCancelable(isCancellable)
+            builder.setPositiveButton(positiveButtonText) { dialogInterface: DialogInterface?, i: Int ->
+                dialogListener.onPositiveClick()
+                dialogInterface?.dismiss()
+            }
+            builder.setNegativeButton(negativeButtonText)
+            { dialogInterface: DialogInterface?, i: Int ->
+                dialogListener.onNegativeClick()
+                dialogInterface?.dismiss()
+            }
+            val alertDialog = builder.create()
+            alertDialog.show()
+        }
     }
 }

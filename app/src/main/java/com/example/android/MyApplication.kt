@@ -7,6 +7,10 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
 open class MyApplication: Application() {
 
     private lateinit var mGson: Gson

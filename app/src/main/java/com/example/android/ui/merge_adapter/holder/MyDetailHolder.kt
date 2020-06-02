@@ -2,14 +2,18 @@ package com.example.android.ui.merge_adapter.holder
 
 import android.view.View
 import com.example.android.base.BaseViewHolder
-import com.example.android.data.MyDetail
+import com.example.android.data.Detail
 import com.example.android.other.ViewHolderListener
 import kotlinx.android.synthetic.main.item_layout_my_detail.view.*
 
-class MyDetailHolder internal constructor(view: View?, listener: ViewHolderListener<MyDetail>?) :
-    BaseViewHolder<MyDetail>(view, listener) {
+/**
+ * @author TheCuong
+ * @since 01/06/2018
+ */
+class MyDetailHolder internal constructor(view: View?, listener: ViewHolderListener<Detail>?) :
+    BaseViewHolder<Detail>(view, listener) {
 
-    override fun bindData(data: MyDetail?) {
+    override fun bindData(data: Detail?) {
         if(data != null){
             var sTemp = ""
 
