@@ -32,3 +32,5 @@ The “Navigation Component” simplifies implementing navigation, while also he
  Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. — Android Developers
   
 ![Image of Message](https://miro.medium.com/max/1280/1*N5E7JtRrjEyEINHNGdKaHQ.png)
+
+Thanks for watching!
