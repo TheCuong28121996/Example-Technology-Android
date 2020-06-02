@@ -1,8 +1,10 @@
 package com.example.android.ui
 
+import android.content.Intent
 import android.view.View
 import com.example.android.R
 import com.example.android.base.BaseFragment
+import com.example.compose_ui.ComposeActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 
 /**
@@ -31,6 +33,10 @@ class MainFragment: BaseFragment() {
 
         btnMessage.setOnClickListener {
             startFragment(R.id.action_mainFragment_to_messageFragment)
+        }
+
+        btnCompose.setOnClickListener {
+            startActivity(Intent(requireContext(), ComposeActivity::class.java))
         }
     }
 

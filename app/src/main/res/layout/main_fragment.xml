@@ -41,5 +41,14 @@
         android:layout_toEndOf="@id/btnMergeAdapter"
         android:layout_below="@id/btnFlutterModule"/>
 
+    <Button
+        android:id="@+id/btnCompose"
+        style="@style/button_action"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_button_yellow"
+        android:text="Compose Ui"
+        android:textAllCaps="false"
+        android:layout_below="@id/btnMergeAdapter"/>
+
 
 </RelativeLayout>

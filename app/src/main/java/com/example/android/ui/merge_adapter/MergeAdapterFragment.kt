@@ -17,7 +17,7 @@ import com.example.android.other.ViewHolderListener
 import com.example.android.ui.merge_adapter.adapter.BannerAdapter
 import com.example.android.ui.merge_adapter.adapter.DetailAdapter
 import com.example.android.ui.merge_adapter.adapter.UsersAdapter
-import com.ilogic.roid.apphub.utils.Event
+import com.example.android.utils.Event
 import kotlinx.android.synthetic.main.merge_adapter_fragment.*
 
 /**
