@@ -1,5 +1,5 @@
 # Android + MVVM + Kotlin + Navigation Component + Motion Layout + MergeAdapter + Compose UI 
-Example new technology android
+[link to Kotlin!](https://kotlinlang.org/)
 ## 1. Navigation Component <h2>
 ![Image of Navigaiton Component](https://miro.medium.com/max/1280/1*ESf1y0VYcHE5ldkCDD8HKA.png)
 ## 2. MVVM, Kotlin <h2>
