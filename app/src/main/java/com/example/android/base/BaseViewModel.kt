@@ -27,9 +27,7 @@ open class BaseViewModel : ViewModel() {
     }
 
     fun launchOnUI(block: suspend CoroutineScope.() -> Unit) {
-
         viewModelScope.launch { block() }
-
     }
 
     suspend fun <T> launchOnIO(block: suspend CoroutineScope.() -> T) {
