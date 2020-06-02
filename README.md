@@ -1,6 +1,9 @@
 # Android + MVVM + Kotlin + Navigation Component + Motion Layout + MergeAdapter + Compose UI 
 [![Kotlin](https://img.shields.io/badge/kotlin-1.3.72-brightgreen)](http://kotlinlang.org)
 [![Constraint Layout](https://img.shields.io/badge/constraintlayout-2.0.0--beta6-green)](https://developer.android.com/training/constraint-layout)
+[![Navigation component](https://img.shields.io/badge/Navigation%20component-2.3.0--beta01-yellowgreen)](https://developer.android.com/guide/navigation/navigation-getting-started)
+[![Recyclerview](https://img.shields.io/badge/Recyclerview-1.2.0--alpha03-yellow)](https://developer.android.com/guide/topics/ui/layout/recyclerview)
+[![Compose](https://img.shields.io/badge/Jetpack%20Compose-0.1.0--dev0-red)](https://developer.android.com/jetpack/compose)
 ## 1. Navigation Component <h2>
 ![Image of Navigaiton Component](https://miro.medium.com/max/1280/1*ESf1y0VYcHE5ldkCDD8HKA.png)
 ## 2. MVVM, Kotlin <h2>
