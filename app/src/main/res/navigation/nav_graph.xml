@@ -40,11 +40,19 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_mainFragment_to_multipleViewTypeFragment"
+            app:destination="@id/multipleViewTypeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
         android:id="@+id/motionFragment"
-        android:name="com.example.android.ui.motion.MotionFragment"
+        android:name="com.example.android.ui.motion_layout.MotionFragment"
         android:label="MotionFragment"
         tools:layout="@layout/motion_fragment"/>
 
@@ -63,5 +71,11 @@
         android:name="com.example.android.ui.message_facebook.MessageFragment"
         android:label="MessageFragment"
         tools:layout="@layout/message_fragment"/>
+
+    <fragment
+        android:id="@+id/multipleViewTypeFragment"
+        android:name="com.example.android.ui.recyclerview_multiple_view_types.MultipleViewTypeFragment"
+        android:label="MultipleViewTypeFragment"
+        tools:layout="@layout/multiple_view_type_fragment"/>
 
 </navigation>

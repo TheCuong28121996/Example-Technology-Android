@@ -1,12 +1,10 @@
 package com.example.android.base
 
 import android.app.Dialog
-import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.android.other.DialogListener
+import com.example.android.utils.CommonUtils
 import com.example.android.utils.DebugLog
-import com.ilogic.roid.hub.utils.CommonUtils
 import java.util.*
 
 /**

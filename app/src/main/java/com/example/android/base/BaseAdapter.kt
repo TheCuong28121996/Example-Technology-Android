@@ -1,26 +1,30 @@
 package com.example.android.base
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.data.User
 import com.example.android.other.ViewHolderListener
 
 /**
  * @author TheCuong
  * @since 01/06/2018
  */
-abstract class BaseAdapter<O> : RecyclerView.Adapter<BaseViewHolder<O>>(),
-    ViewHolderListener<O> {
+abstract class BaseAdapter<O, T> :RecyclerView.Adapter<BaseViewHolder<O, T>>() {
 
-    protected var mData: MutableList<O> = ArrayList()
-    protected var mItemClickListener: ViewHolderListener<O>? = null
+    private var mData: MutableList<O> = ArrayList()
 
-    fun setOnItemClickListener(listener: ViewHolderListener<O>) {
+    private lateinit var mContext: Context
+
+    private lateinit var mItemClickListener: ViewHolderListener<T>
+
+    fun setOnItemClickListener(listener: ViewHolderListener<T>) {
         mItemClickListener = listener
     }
 
-    fun getListener(): ViewHolderListener<O>?{
+    fun getListener(): ViewHolderListener<T> {
         return this.mItemClickListener
     }
 
@@ -82,9 +86,14 @@ abstract class BaseAdapter<O> : RecyclerView.Adapter<BaseViewHolder<O>>(),
         return null
     }
 
-    override fun itemClicked(var1: O?, var2: Int) {
-
+    open fun getListItem(): MutableList<O>?{
+        return mData
     }
+
+    open fun getContext(): Context{
+        return mContext
+    }
+
 
     open fun clear() {
         mData.clear()
@@ -92,22 +101,17 @@ abstract class BaseAdapter<O> : RecyclerView.Adapter<BaseViewHolder<O>>(),
     }
 
     fun createView(resource: Int, parent: ViewGroup, attachToRoot: Boolean = false): View {
+        mContext = parent.context
         return LayoutInflater.from(parent.context).inflate(resource, parent, attachToRoot)
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder<O>, position: Int) {
+    override fun onBindViewHolder(holder: BaseViewHolder<O, T>, position: Int) {
         val item = getItemAt(position)
         holder.bindData(item)
-        holder.itemView.setOnClickListener {
-            mItemClickListener?.itemClicked(
-                getItemAt(holder.adapterPosition),
-                holder.adapterPosition
-            )
-            itemClicked(item, position)
-        }
     }
 
     override fun getItemCount(): Int {
         return mData.size
     }
+
 }

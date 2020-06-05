@@ -1,4 +1,4 @@
-package com.ilogic.roid.hub.utils
+package com.example.android.utils
 
 import android.app.AlertDialog
 import android.app.Dialog

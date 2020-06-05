@@ -50,5 +50,15 @@
         android:textAllCaps="false"
         android:layout_below="@id/btnMergeAdapter"/>
 
+    <Button
+        android:id="@+id/btnFood"
+        style="@style/button_action"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_button_yellow"
+        android:text="Food"
+        android:textAllCaps="false"
+        android:layout_below="@id/btnMessage"
+        android:layout_toEndOf="@id/btnCompose"/>
+
 
 </RelativeLayout>

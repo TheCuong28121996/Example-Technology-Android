@@ -25,6 +25,7 @@ class MainActivity : BaseActivity() {
             appBar.visibility = visibility
             toolbar.title = title
             toolbar.setNavigationOnClickListener { v: View? -> onBackPressed() }
+
             enableLayoutBehaviour()
         } else {
             appBar.visibility = visibility
@@ -45,4 +46,5 @@ class MainActivity : BaseActivity() {
         params.behavior = null
         constraintLayout.requestLayout()
     }
+
 }

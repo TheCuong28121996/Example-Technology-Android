@@ -19,6 +19,7 @@ import com.example.android.ui.merge_adapter.adapter.DetailAdapter
 import com.example.android.ui.merge_adapter.adapter.UsersAdapter
 import com.example.android.utils.Event
 import kotlinx.android.synthetic.main.merge_adapter_fragment.*
+import java.util.*
 
 /**
  * @author TheCuong
@@ -27,6 +28,7 @@ import kotlinx.android.synthetic.main.merge_adapter_fragment.*
 class MergeAdapterFragment : BaseFragment() {
 
     private lateinit var viewModel: MergeAdapterViewModel
+    private val mMergeAdapter: MergeAdapter = MergeAdapter()
     private val myDetailAdapter by lazy { DetailAdapter() }
     private val userAdapter by lazy { UsersAdapter() }
     private val bannerAdapter by lazy { BannerAdapter() }
@@ -45,17 +47,20 @@ class MergeAdapterFragment : BaseFragment() {
 
         myDetailAdapter.run {
             myDetailAdapter.setOnItemClickListener(detailListener)
+            mMergeAdapter.addAdapter(0, myDetailAdapter)
         }
 
         userAdapter.run {
             userAdapter.setOnItemClickListener(userListener)
+            mMergeAdapter.addAdapter(1, userAdapter)
         }
 
         bannerAdapter.run {
             bannerAdapter.setOnItemClickListener(bannerListener)
+            mMergeAdapter.addAdapter(2, bannerAdapter)
         }
 
-        recyclerView.adapter = MergeAdapter(myDetailAdapter, userAdapter, bannerAdapter)
+        recyclerView.adapter = mMergeAdapter
 
         loadMore()
 
@@ -125,20 +130,21 @@ class MergeAdapterFragment : BaseFragment() {
     }
 
     private val userListener = object : ViewHolderListener<User> {
-        override fun itemClicked(var1: User?, var2: Int) {
-            viewModel.eventMessage.value = Event(var1!!.name)
+        override fun itemClicked(data: User, positon: Int) {
+            viewModel.eventMessage.value = Event(data.name)
         }
     }
 
     private val bannerListener = object : ViewHolderListener<Banner> {
-        override fun itemClicked(var1: Banner?, var2: Int) {
-            viewModel.eventMessage.value = Event(var1!!.bannerImage.toString())
+        override fun itemClicked(data: Banner, positon: Int) {
+            viewModel.eventMessage.value = Event(data.bannerImage.toString())
         }
     }
 
     private val detailListener = object : ViewHolderListener<Detail> {
-        override fun itemClicked(var1: Detail?, var2: Int) {
-            viewModel.eventMessage.value = Event(var1!!.name)
+
+        override fun itemClicked(data: Detail, positon: Int) {
+            viewModel.eventMessage.value = Event(data.name)
         }
     }
 }

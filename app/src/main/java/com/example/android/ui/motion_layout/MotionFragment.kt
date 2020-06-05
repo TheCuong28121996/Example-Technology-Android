@@ -1,4 +1,4 @@
-package com.example.android.ui.motion
+package com.example.android.ui.motion_layout
 
 import android.view.View
 import com.example.android.R

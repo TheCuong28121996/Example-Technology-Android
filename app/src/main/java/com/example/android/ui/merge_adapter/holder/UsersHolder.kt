@@ -11,20 +11,20 @@ import kotlinx.android.synthetic.main.item_layout_user.view.*
  * @author TheCuong
  * @since 01/06/2018
  */
-class UsersHolder internal constructor(view: View?, listener: ViewHolderListener<User>?):
-    BaseViewHolder<User>(view, listener){
+class UsersHolder internal constructor(view: View, listener: ViewHolderListener<User>) :
+    BaseViewHolder<User, User>(view, listener) {
 
     override fun bindData(data: User?) {
-        if(data != null){
+        if (data != null) {
             var sTemp = ""
 
             sTemp = data.name
-            if(!sTemp.isEmpty()){
+            if (!sTemp.isEmpty()) {
                 itemView.textViewUserName.text = sTemp
             }
 
             sTemp = data.avatar
-            if(!sTemp.isEmpty()){
+            if (!sTemp.isEmpty()) {
                 Glide.with(itemView.imageViewAvatar.context)
                     .load(sTemp)
                     .into(itemView.imageViewAvatar)

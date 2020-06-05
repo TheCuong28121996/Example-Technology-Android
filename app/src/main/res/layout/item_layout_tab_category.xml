@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/view_match_width">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/Base.Widget.Design.TabLayout">
+
+    </com.google.android.material.tabs.TabLayout>
+
+</RelativeLayout>

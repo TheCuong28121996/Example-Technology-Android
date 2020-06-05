@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Example Technology Android</string>
+    <string name="for_you">Dành cho bạn</string>
+    <string name="all">Tất cả</string>
+
+    <string name="time">%s - %s phút</string>
+    <string name="discount">Giảm %s</string>
+    <string name="order">Đặt món</string>
+    <string name="near">Gần đây</string>
+    <string name="good_price">Giá tốt</string>
 </resources>

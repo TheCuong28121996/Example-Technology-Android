@@ -11,14 +11,14 @@ import com.example.android.ui.merge_adapter.holder.MyDetailHolder
  * @author TheCuong
  * @since 01/06/2018
  */
-class DetailAdapter : BaseAdapter<Detail>() {
+class DetailAdapter : BaseAdapter<Detail, Detail>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Detail> {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseViewHolder<Detail, Detail> {
         return MyDetailHolder(
-            createView(
-                R.layout.item_layout_my_detail,
-                parent
-            ), getListener()
+            createView(R.layout.item_layout_my_detail, parent), getListener()
         )
     }
 }

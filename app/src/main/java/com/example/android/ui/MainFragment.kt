@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.main_fragment.*
  * @author TheCuong
  * @since 01/06/2018
  */
-class MainFragment: BaseFragment() {
+class MainFragment : BaseFragment() {
 
     override fun getLayoutResId(): Int = R.layout.main_fragment
 
@@ -19,7 +19,7 @@ class MainFragment: BaseFragment() {
 
         setVisibilityToolBar(View.VISIBLE, "Example Technology")
 
-        btnMotionLayout.setOnClickListener{
+        btnMotionLayout.setOnClickListener {
             startFragment(R.id.action_mainFragment_to_motionFragment)
         }
 
@@ -27,7 +27,7 @@ class MainFragment: BaseFragment() {
             startFragment(R.id.action_mainFragment_to_inputNumbersFragment)
         }
 
-        btnMergeAdapter.setOnClickListener{
+        btnMergeAdapter.setOnClickListener {
             startFragment(R.id.action_mainFragment_to_mergeAdapterFragment)
         }
 
@@ -37,6 +37,10 @@ class MainFragment: BaseFragment() {
 
         btnCompose.setOnClickListener {
             startActivity(Intent(requireContext(), ComposeActivity::class.java))
+        }
+
+        btnFood.setOnClickListener {
+            startFragment(R.id.action_mainFragment_to_multipleViewTypeFragment)
         }
     }
 
