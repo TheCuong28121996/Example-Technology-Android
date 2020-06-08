@@ -1,4 +1,4 @@
-package com.example.android.ui.recyclerview_multiple_view_types.foryou.holder
+package com.example.android.ui.recyclerview_multiple_view_types.menu.holder
 
 import android.view.View
 import com.bumptech.glide.Glide
@@ -7,13 +7,14 @@ import com.example.android.R
 import com.example.android.base.BaseViewHolder
 import com.example.android.data.InfoFood
 import com.example.android.other.ViewHolderListener
+import com.example.android.utils.DebugLog
 import kotlinx.android.synthetic.main.item_layout_info_food.view.*
 
-class InnerForYouHolder internal constructor(view: View, listener: ViewHolderListener<InfoFood>) :
+class InnerMenuHolder internal constructor(view: View, listener: ViewHolderListener<InfoFood>) :
     BaseViewHolder<InfoFood, InfoFood>(view, listener) {
-
     override fun bindData(data: InfoFood?) {
         if (data != null) {
+            DebugLog.show("TheCuong")
             var sTemp = ""
 
             sTemp = data.image

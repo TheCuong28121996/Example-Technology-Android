@@ -12,6 +12,7 @@ import com.example.android.data.BannerFood
 import com.example.android.data.BaseModel
 import com.example.android.other.ViewHolderListener
 import com.example.android.ui.recyclerview_multiple_view_types.banner.adapter.ViewPagerAdapter
+import com.example.android.utils.DebugLog
 import kotlinx.android.synthetic.main.item_layout_banner_food.view.*
 import java.util.*
 
@@ -33,26 +34,30 @@ class BannerFoodHolder internal constructor(view: View, listener: ViewHolderList
             mAdapter.setOnItemClickListener(listener)
         }
 
-        itemView.viewPager.apply {
-            adapter = mAdapter
-            registerOnPageChangeCallback(slidingCallback)
+        if(mAdapter.getListItem() == null){
+
+            itemView.viewPager.apply {
+                adapter = mAdapter
+                registerOnPageChangeCallback(slidingCallback)
+            }
+
+            slidingDotsCount = data!!.entity.size
+            slidingImageDots = arrayOfNulls(slidingDotsCount)
+
+            setDot()
+
+            slidingImageDots[0]?.setImageDrawable(
+                ContextCompat.getDrawable(
+                    itemView.context,
+                    R.drawable.active_dot
+                )
+            )
+
+            setHandler(data)
+
+            mAdapter.addData(data.entity)
         }
 
-        slidingDotsCount = data!!.entity.size
-        slidingImageDots = arrayOfNulls(slidingDotsCount)
-
-        setDot()
-
-        slidingImageDots[0]?.setImageDrawable(
-            ContextCompat.getDrawable(
-                itemView.context,
-                R.drawable.active_dot
-            )
-        )
-
-        setHandler(data)
-
-        mAdapter.addData(data.entity)
     }
 
     private fun setDot() {

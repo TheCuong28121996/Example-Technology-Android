@@ -1,6 +1,7 @@
 package com.example.android.ui.recyclerview_multiple_view_types.tab_category
 
 import android.view.View
+import androidx.core.view.get
 import com.example.android.base.BaseViewHolder
 import com.example.android.data.BaseModel
 import com.example.android.data.TabEntity
@@ -14,7 +15,7 @@ class TabCategoryHolder internal constructor(view: View, listener: ViewHolderLis
 
     override fun bindData(data: BaseModel<TabEntity>?) {
 
-        if (data != null) {
+        if (data != null && itemView.tabLayout.getTabAt(0) == null) {
             for (item in data.entity) {
                 itemView.tabLayout.addTab(itemView.tabLayout.newTab().setText(item.name))
             }

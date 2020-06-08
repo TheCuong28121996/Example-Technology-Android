@@ -1,6 +1,6 @@
 package com.example.android.data
 
 data class TabEntity (
-    val id: String = "",
+    val id: Int = 0,
     val name: Int = 0
 )

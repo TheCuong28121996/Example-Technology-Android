@@ -38,7 +38,13 @@ abstract class BaseAdapter<O, T> :RecyclerView.Adapter<BaseViewHolder<O, T>>() {
         notifyItemRangeInserted(size, items.size)
     }
 
-    fun addData(listItems: Collection<O>) {
+    open fun addData(listItems: Collection<O>) {
+        this.mData.addAll(listItems)
+        notifyDataSetChanged()
+    }
+
+    open fun refreshItem(listItems: Collection<O>){
+        this.mData.clear()
         this.mData.addAll(listItems)
         notifyDataSetChanged()
     }
@@ -86,8 +92,8 @@ abstract class BaseAdapter<O, T> :RecyclerView.Adapter<BaseViewHolder<O, T>>() {
         return null
     }
 
-    open fun getListItem(): MutableList<O>?{
-        return mData
+    open fun getListItem(): Int?{
+        return if (mData.size > 0) mData.size else null
     }
 
     open fun getContext(): Context{

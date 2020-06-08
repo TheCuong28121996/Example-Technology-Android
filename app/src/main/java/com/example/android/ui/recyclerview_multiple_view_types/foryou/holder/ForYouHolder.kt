@@ -22,13 +22,15 @@ class ForYouHolder internal constructor(view: View, listener: ViewHolderListener
                 setOnItemClickListener(listener)
             }
 
-            itemView.recyclerView.apply {
-                itemAnimator = DefaultItemAnimator()
-                setHasFixedSize(true)
-                adapter = mAdapter
-            }
+            if(mAdapter.getListItem() == null){
 
-            mAdapter.addData(data.entity)
+                itemView.recyclerView.apply {
+                    itemAnimator = DefaultItemAnimator()
+                    setHasFixedSize(true)
+                    adapter = mAdapter
+                }
+                mAdapter.addData(data.entity)
+            }
         }
     }
 

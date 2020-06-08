@@ -16,6 +16,7 @@ import com.example.android.ui.merge_adapter.MergeAdapterViewModel
 import com.example.android.ui.recyclerview_multiple_view_types.article.adapter.ArticleAdapter
 import com.example.android.ui.recyclerview_multiple_view_types.banner.adapter.BannerFoodAdapter
 import com.example.android.ui.recyclerview_multiple_view_types.foryou.adapter.ForYouAdapter
+import com.example.android.ui.recyclerview_multiple_view_types.menu.adapter.MenuAdapter
 import com.example.android.ui.recyclerview_multiple_view_types.tab_category.TabCategoryAdapter
 import com.example.android.utils.DebugLog
 import kotlinx.android.synthetic.main.multiple_view_type_fragment.*
@@ -28,6 +29,7 @@ class MultipleViewTypeFragment : BaseFragment() {
     private val mArticleAdapter by lazy { ArticleAdapter() }
     private val mForYouAdapter by lazy { ForYouAdapter() }
     private val mTabCategoryAdapter by lazy { TabCategoryAdapter() }
+    private val mMenuAdapter by lazy { MenuAdapter() }
 
     override fun getLayoutResId(): Int = R.layout.multiple_view_type_fragment
 
@@ -43,22 +45,27 @@ class MultipleViewTypeFragment : BaseFragment() {
 
         mBannerAdapter.run {
             setOnItemClickListener(listenerBanner)
-            mMergeAdapter.addAdapter(mBannerAdapter)
+            mMergeAdapter.addAdapter(0, mBannerAdapter)
         }
 
         mArticleAdapter.run {
             setOnItemClickListener(listenerArticle)
-            mMergeAdapter.addAdapter(mArticleAdapter)
+            mMergeAdapter.addAdapter(1, mArticleAdapter)
         }
 
         mForYouAdapter.run {
             setOnItemClickListener(listenerForYou)
-            mMergeAdapter.addAdapter(mForYouAdapter)
+            mMergeAdapter.addAdapter(2, mForYouAdapter)
         }
 
         mTabCategoryAdapter.run {
             setOnItemClickListener(listenerTab)
-            mMergeAdapter.addAdapter(mTabCategoryAdapter)
+            mMergeAdapter.addAdapter(3, mTabCategoryAdapter)
+        }
+
+        mMenuAdapter.run {
+            setOnItemClickListener(listenerMenu)
+            mMergeAdapter.addAdapter(4, mMenuAdapter)
         }
 
         recyclerView.apply {
@@ -73,31 +80,56 @@ class MultipleViewTypeFragment : BaseFragment() {
         viewModel.getListArticle()
         viewModel.getListForYou()
         viewModel.getListTab()
+        viewModel.getListOrder()
     }
 
     override fun startObserve() {
         viewModel.apply {
             _repoBanner.observe(this@MultipleViewTypeFragment, Observer {
-                if(it != null){
+                if (it != null) {
                     mBannerAdapter.addData(it)
                 }
             })
 
             _repoArticle.observe(this@MultipleViewTypeFragment, Observer {
-                if(it != null){
+                if (it != null) {
                     mArticleAdapter.addData(it)
                 }
             })
 
             _repoForYou.observe(this@MultipleViewTypeFragment, Observer {
-                if(it != null){
+                if (it != null) {
                     mForYouAdapter.addData(it)
                 }
             })
 
             _repoTab.observe(this@MultipleViewTypeFragment, Observer {
-                if(it != null){
+                if (it != null) {
                     mTabCategoryAdapter.addData(it)
+                }
+            })
+
+            _repoListOrder.observe(this@MultipleViewTypeFragment, Observer {
+                if (it != null) {
+                    mMergeAdapter.removeAdapter(mMenuAdapter)
+                    mMenuAdapter.refreshItem(it)
+                    mMergeAdapter.addAdapter(4, mMenuAdapter)
+                }
+            })
+
+            _repoListNear.observe(this@MultipleViewTypeFragment, Observer {
+                if (it != null) {
+                    mMergeAdapter.removeAdapter(mMenuAdapter)
+                    mMenuAdapter.refreshItem(it)
+                    mMergeAdapter.addAdapter(4, mMenuAdapter)
+                }
+            })
+
+            _repoListGoodPrice.observe(this@MultipleViewTypeFragment, Observer {
+                if (it != null) {
+                    mMergeAdapter.removeAdapter(mMenuAdapter)
+                    mMenuAdapter.refreshItem(it)
+                    mMergeAdapter.addAdapter(4, mMenuAdapter)
                 }
             })
         }
@@ -120,6 +152,22 @@ class MultipleViewTypeFragment : BaseFragment() {
 
     val listenerTab = object : ViewHolderListener<TabEntity> {
         override fun itemClicked(data: TabEntity, positon: Int) {
+            when (data.id) {
+                0 -> {
+                    viewModel.getListOrder()
+                }
+                1 -> {
+                    viewModel.getListNear()
+                }
+                2 -> {
+                    viewModel.getListGoodPrice()
+                }
+            }
+        }
+    }
+
+    val listenerMenu = object : ViewHolderListener<InfoFood> {
+        override fun itemClicked(data: InfoFood, positon: Int) {
         }
     }
 }

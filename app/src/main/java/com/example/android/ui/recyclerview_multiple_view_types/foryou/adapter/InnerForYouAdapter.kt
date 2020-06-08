@@ -14,7 +14,7 @@ class InnerForYouAdapter : BaseAdapter<InfoFood, InfoFood>() {
         viewType: Int
     ): BaseViewHolder<InfoFood, InfoFood> {
         return InnerForYouHolder(
-            createView(R.layout.item_layout_inner_for_you, parent), getListener()
+            createView(R.layout.item_layout_info_food, parent), getListener()
         )
     }
 }
